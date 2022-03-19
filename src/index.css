@@ -5,9 +5,55 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-cont {
+  margin-top: 15px;
+}
+
+.row {
+  margin-bottom: 35px;
+}
+.row.little-space {
+  margin-bottom: 15px;
+}
+
+.apexcharts-toolbar {
+  display: none !important;
+}
+
+.btn-info {
+  color: #003c68 !important;
+}
+
+.point-pill {
+  display: inline-block;
+  width: 12px !important;
+  height: 12px !important;
+  padding: 2px !important;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

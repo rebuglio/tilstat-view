@@ -1,25 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import {TopNavbar} from "./elements/navbars";
+import {TilStat} from "./pages/tilstat";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container} from "react-bootstrap";
+import {Switch, Route, BrowserRouter as Router, Redirect} from "react-router-dom"
+import {TilStatHof} from "./pages/tilstathof";
+
+/**
+ * The options array should contain objects.
+ * Required keys are "name" and "value" but you can have and use any number of key/value pairs.
+ */
+
+/* Simple example */
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Router>
+    <TopNavbar />
+    <Container className="main-cont">
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to="/tilstat" />
+        </Route>
+        <Route path="/tilstat" exact>
+          <TilStat />
+        </Route>
+        <Route path="/tilstat/hof" exact>
+          <TilStatHof />
+        </Route>
+      </Switch>
+    </Container>
+  </Router>
 }
 
 export default App;
